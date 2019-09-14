@@ -1,3 +1,8 @@
+import 'package:dashboard/page/facebook.dart';
+import 'package:dashboard/page/linkedin.dart';
+import 'package:dashboard/page/twitter.dart';
+import 'package:dashboard/page/whatsapp.dart';
+import 'package:dashboard/page/youtube.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -88,6 +93,7 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
+             onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Youtube())),
           ),
           _buildTile(
             Padding(
@@ -114,7 +120,7 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
-           
+           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Facebook())),
           ),
           _buildTile(
             Padding
@@ -142,6 +148,7 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Twitter())),
           ),
           _buildTile(
             Padding
@@ -176,7 +183,8 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
-            onTap: () {},
+            
+           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Whatsapp())),
           ),
           _buildTile(
             Padding
@@ -213,7 +221,7 @@ class _MainPageState extends State<MainPage>
                 ]
               ),
             ),
-            onTap: () {},
+           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_)=> Linkedin())),
           )
         ],
         staggeredTiles: [
